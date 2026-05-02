@@ -16,6 +16,15 @@ html {
   scroll-behavior: auto;
 }
 
+@view-transition {
+  navigation: none;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+}
+
 body {
   margin: 0;
   color: var(--ink);
@@ -38,6 +47,13 @@ button {
   color: inherit;
   font: inherit;
   -webkit-tap-highlight-color: transparent;
+  transition:
+    color 130ms ease,
+    border-color 130ms ease,
+    background 130ms ease,
+    opacity 130ms ease,
+    transform 130ms ease,
+    filter 130ms ease;
 }
 
 a {
@@ -196,6 +212,9 @@ dt,
   object-fit: cover;
   filter: grayscale(100%);
   opacity: 0.88;
+  transition:
+    filter 180ms ease,
+    opacity 180ms ease;
 }
 
 .media-button:hover img,
