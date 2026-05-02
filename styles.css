@@ -13,7 +13,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 
 body {
@@ -25,16 +25,6 @@ body {
     "Helvetica Neue", Arial, sans-serif;
   line-height: 1.55;
   overflow-x: hidden;
-  opacity: 1;
-  transform: translateY(0);
-  transition:
-    opacity 150ms ease,
-    transform 150ms ease;
-}
-
-body.is-leaving {
-  opacity: 0;
-  transform: translateY(4px);
 }
 
 img,
@@ -48,24 +38,11 @@ button {
   color: inherit;
   font: inherit;
   -webkit-tap-highlight-color: transparent;
-  transition:
-    color 130ms ease,
-    border-color 130ms ease,
-    background 130ms ease,
-    opacity 130ms ease,
-    transform 130ms ease,
-    filter 130ms ease;
 }
 
 a {
   display: inline-block;
   text-decoration: none;
-}
-
-a.is-clicking,
-button.is-clicking {
-  opacity: 0.72;
-  transform: scale(0.97);
 }
 
 .site-header {
@@ -102,8 +79,7 @@ button.is-clicking {
 }
 
 .site-nav a:hover,
-.site-nav a:focus-visible,
-.site-nav a.is-active {
+.site-nav a:focus-visible {
   color: var(--ink);
   border-bottom-color: currentColor;
   outline: none;
@@ -137,10 +113,6 @@ button.is-clicking {
   aspect-ratio: 1;
   border: 1px solid var(--muted);
   border-radius: 50%;
-  transition:
-    border-color 180ms ease,
-    background 180ms ease,
-    transform 180ms ease;
 }
 
 .home-work-button span {
@@ -157,7 +129,6 @@ button.is-clicking {
   border-color: var(--ink);
   background: var(--ink);
   outline: none;
-  transform: translateY(-2px);
 }
 
 .page-shell {
@@ -225,9 +196,6 @@ dt,
   object-fit: cover;
   filter: grayscale(100%);
   opacity: 0.88;
-  transition:
-    filter 180ms ease,
-    opacity 180ms ease;
 }
 
 .media-button:hover img,
@@ -445,7 +413,6 @@ dd {
 
 @media (max-width: 900px) {
   .site-header {
-    position: static;
     padding: 20px 24px 0;
   }
 
