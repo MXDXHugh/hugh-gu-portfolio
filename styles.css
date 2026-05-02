@@ -304,8 +304,6 @@ dd {
 }
 
 .section-label {
-  position: sticky;
-  top: 72px;
   align-self: start;
 }
 
