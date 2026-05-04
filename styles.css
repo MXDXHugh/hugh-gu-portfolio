@@ -36,6 +36,27 @@ body {
   overflow-x: hidden;
 }
 
+main,
+.site-footer {
+  animation: content-enter 240ms ease both;
+  transition: opacity 180ms ease;
+}
+
+body.is-leaving main,
+body.is-leaving .site-footer {
+  opacity: 0;
+}
+
+@keyframes content-enter {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 img,
 video {
   display: block;
@@ -79,12 +100,12 @@ a {
   justify-content: flex-end;
   gap: clamp(16px, 2vw, 26px);
   color: var(--muted);
-  font-size: clamp(15px, 1.2vw, 18px);
+  font-size: clamp(18px, 1.5vw, 23px);
 }
 
 .brand {
   flex: 0 0 auto;
-  font-size: clamp(20px, 1.8vw, 26px);
+  font-size: clamp(24px, 2.4vw, 34px);
   font-weight: 650;
   line-height: 1;
 }
@@ -389,6 +410,16 @@ dd {
   outline: none;
 }
 
+.site-footer {
+  width: min(1180px, calc(100% - 64px));
+  margin: 0 auto;
+  padding: 0 0 28px;
+  color: var(--quiet);
+  font-size: 11px;
+  line-height: 1.35;
+  text-align: right;
+}
+
 .lightbox {
   width: min(1120px, calc(100% - 40px));
   padding: 0;
@@ -473,12 +504,12 @@ dd {
   }
 
   .brand {
-    font-size: 16px;
+    font-size: 19px;
   }
 
   .site-nav {
     gap: 14px;
-    font-size: 13px;
+    font-size: 15px;
   }
 
   .home-main {
@@ -535,5 +566,11 @@ dd {
     font-size: 17px;
     overflow-wrap: anywhere;
     word-break: break-all;
+  }
+
+  .site-footer {
+    width: min(326px, calc(100% - 64px));
+    padding-bottom: 22px;
+    text-align: left;
   }
 }
